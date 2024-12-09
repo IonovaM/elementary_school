@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Панель{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white mb-4 d-flex justify-content-center align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Школьный портал</h3>
+            <nav>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li><a href="/school/" class="text-white">Главная</a></li>
+                    <li><a href="/school/teachers/" class="text-white">Учителя</a></li>
+                    <li><a href="/school/classes/" class="text-white">Классы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>

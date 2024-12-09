@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<h1>Добавление домашнего задания для {{ class.name }}</h1>
+<form method="post">
+  {% csrf_token %}
+  <label>Предмет:</label>
+  <input type="text" name="subject" required>
+  <label>Описание:</label>
+  <textarea name="description" required></textarea>
+  <label>Дата выполнения:</label>
+  <input type="date" name="due_date" required>
+  <button type="submit">Добавить</button>
+</form>
+
+</head>
+<body>
+
+</body>
+</html>

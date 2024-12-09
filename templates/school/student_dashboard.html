@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Панель студента {{ student.name }}{% endblock %}
+{% block content %}
+    <h1>Дашборд ученика {{ student.name }}</h1>
+
+    <h2>Домашние задания</h2>
+    <ul>
+        {% for homework in homeworks %}
+            <li>{{ homework.homework }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Оценки</h2>
+    <ul>
+        {% for grade in grades %}
+            <li>{{ grade.subject }}: {{ grade.grade }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% include 'footer.html' %}
